@@ -16,7 +16,7 @@ var Seattle = {
 
     theAvg: function (min, max) {
         for (var i = 0; i < Seattle.Hours.length; i++) {
-            this.avgCookie = randomAvd(min, max);
+            this.avgCookie = Math.floor(randomNumberCustPerHour(min, max) * this.avgCookieSale);
             // console.log(this.avgCookie);
             this.arryCookie.push(this.avgCookie);
             this.totalAvg = this.totalAvg + this.avgCookie;
@@ -51,10 +51,10 @@ function randomNumberCustPerHour(min, max) {
     return ranNumCust;
 }
 
-function randomAvd(min, max) {
-    var ranAvg = Math.floor(Math.random() * (max - min + 1) + min);
-    return ranAvg;
-}
+// function randomAvd(min, max) {
+//     var ranAvg = Math.floor(Math.random() * (max - min + 1) + min);
+//     return ranAvg;
+// }
 
 
 
@@ -75,7 +75,7 @@ var Tokyo = {
 
     theAvg2: function (min, max) {
         for (var i = 0; i < Tokyo.Hours2.length; i++) {
-            this.avgCookie2 = randomAvd2(min, max);
+            this.avgCookie2 = Math.floor(randomNumberCustPerHour2(min, max) * this.avgCookieSale2);
             this.arryCookie2.push(this.avgCookie2);
             this.totalAvg2 = this.totalAvg2 + this.avgCookie2;
         }
@@ -108,10 +108,10 @@ function randomNumberCustPerHour2(min, max) {
     return ranNumCust2;
 }
 
-function randomAvd2(min, max) {
-    var ranAvg2 = Math.floor(Math.random() * (max - min + 1) + min);
-    return ranAvg2;
-}
+// function randomAvd2(min, max) {
+//     var ranAvg2 = Math.floor(Math.random() * (max - min + 1) + min);
+//     return ranAvg2;
+// }
 
 
 
@@ -132,7 +132,7 @@ var Dubai = {
 
     theAvg3: function (min, max) {
         for (var i = 0; i < Dubai.Hours3.length; i++) {
-            this.avgCookie3 = randomAvd3(min, max);
+            this.avgCookie3 = Math.floor(randomNumberCustPerHour3(min, max) * this.avgCookieSale3);
             console.log(this.avgCookie3);
             this.arryCookie3.push(this.avgCookie3);
             this.totalAvg3 = this.totalAvg3 + this.avgCookie3;
@@ -174,7 +174,6 @@ function randomAvd3(min, max) {
 
 
 
-
 //Paris
 var Paris = {
     minPerCus4: 20,
@@ -191,7 +190,7 @@ var Paris = {
 
     theAvg4: function (min, max) {
         for (var i = 0; i < Paris.Hours4.length; i++) {
-            this.avgCookie4 = randomAvd4(min, max);
+            this.avgCookie4 = Math.floor(randomNumberCustPerHour4(min, max) * this.avgCookieSale4);
             console.log(this.avgCookie4);
             this.arryCookie4.push(this.avgCookie4);
             this.totalAvg4 = this.totalAvg4 + this.avgCookie4;
@@ -225,12 +224,6 @@ function randomNumberCustPerHour4(min, max) {
     return ranNumCust;
 }
 
-function randomAvd4(min, max) {
-    var ranAvg = Math.floor(Math.random() * (max - min + 1) + min);
-    return ranAvg;
-}
-
-
 
 
 
@@ -250,7 +243,7 @@ var Lima = {
 
     theAvg5: function (min, max) {
         for (var i = 0; i < Lima.Hours5.length; i++) {
-            this.avgCookie5 = randomAvd5(min, max);
+            this.avgCookie5 = Math.floor(randomNumberCustPerHour5(min, max) * this.avgCookieSale5);
             console.log(this.avgCookie5);
             this.arryCookie5.push(this.avgCookie5);
             this.totalAvg5 = this.totalAvg5 + this.avgCookie5;
@@ -284,7 +277,3 @@ function randomNumberCustPerHour5(min, max) {
     return ranNumCust5;
 }
 
-function randomAvd5(min, max) {
-    var ranAvg5 = Math.floor(Math.random() * (max - min + 1) + min);
-    return ranAvg5;
-}
