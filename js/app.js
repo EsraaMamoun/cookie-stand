@@ -6,6 +6,7 @@ var Seattle = {
     avgCookieSale: 6.3,
     numCustPerHour: 0,
     avgCookie: [0],
+    arryCookie: [],
     totalAvg: 0,
     Hours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
     custPerHour: function (min, max) {
@@ -16,9 +17,11 @@ var Seattle = {
     theAvg: function (min, max) {
         for (var i = 0; i < Seattle.Hours.length; i++) {
             this.avgCookie = randomAvd(min, max);
-            console.log(this.avgCookie);
+            // console.log(this.avgCookie);
+            this.arryCookie.push(this.avgCookie);
             this.totalAvg = this.totalAvg + this.avgCookie;
         }
+        // console.log[this.arryCookie];
     },
     inHTML: function () {
         var secE = document.getElementById('Seattle');
@@ -33,7 +36,7 @@ var Seattle = {
         for(var i =0; i<= this.Hours.length ; i++) {
             var liE = document.createElement('li');
             ulE.appendChild(liE);
-            liE.textContent = `${this.Hours[i]}: ${this.avgCookie} cookies`
+            liE.textContent = `${this.Hours[i]}: ${this.arryCookie[i]} cookies`
         }
         liE.textContent = `Total: ${this.totalAvg} cookies`
     }
@@ -62,6 +65,7 @@ var Tokyo = {
     avgCookieSale2: 1.2,
     numCustPerHour2: 0,
     avgCookie2: [0],
+    arryCookie2: [],
     totalAvg2: 0,
     Hours2: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
     custPerHour2: function (min, max) {
@@ -72,7 +76,7 @@ var Tokyo = {
     theAvg2: function (min, max) {
         for (var i = 0; i < Tokyo.Hours2.length; i++) {
             this.avgCookie2 = randomAvd2(min, max);
-            console.log(this.avgCookie2);
+            this.arryCookie2.push(this.avgCookie2);
             this.totalAvg2 = this.totalAvg2 + this.avgCookie2;
         }
     },
@@ -89,7 +93,7 @@ var Tokyo = {
         for(var i =0; i<=this.Hours2.length ; i++) {
             var liE2 = document.createElement('li');
             ulE2.appendChild(liE2);
-            liE2.textContent = `${this.Hours2[i]}: ${this.avgCookie2[i]} cookies`
+            liE2.textContent = `${this.Hours2[i]}: ${this.arryCookie2[i]} cookies`
         }
         liE2.textContent = `Total: ${this.totalAvg2} cookies`
     }
@@ -119,6 +123,7 @@ var Dubai = {
     avgCookieSale3: 3.7,
     numCustPerHour3: 0,
     avgCookie3: [0],
+    arryCookie3: [],
     totalAvg3: 0,
     Hours3: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
     custPerHour3: function (min, max) {
@@ -129,8 +134,8 @@ var Dubai = {
         for (var i = 0; i < Dubai.Hours3.length; i++) {
             this.avgCookie3 = randomAvd3(min, max);
             console.log(this.avgCookie3);
+            this.arryCookie3.push(this.avgCookie3);
             this.totalAvg3 = this.totalAvg3 + this.avgCookie3;
-
         }
     },
     inHTML3: function () {
@@ -146,7 +151,7 @@ var Dubai = {
         for(var i =0; i<=this.Hours3.length ; i++) {
             var liE3 = document.createElement('li');
             ulE3.appendChild(liE3);
-            liE3.textContent = `${this.Hours3[i]}: ${this.avgCookie3[i]} cookies`
+            liE3.textContent = `${this.Hours3[i]}: ${this.arryCookie3[i]} cookies`
         }
         liE3.textContent = `Total: ${this.totalAvg3} cookies`
     }
@@ -177,6 +182,7 @@ var Paris = {
     avgCookieSale4: 2.3,
     numCustPerHour4: 0,
     avgCookie4: [0],
+    arryCookie4: [],
     totalAvg4: 0,
     Hours4: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
     custPerHour4: function (min, max) {
@@ -187,6 +193,7 @@ var Paris = {
         for (var i = 0; i < Paris.Hours4.length; i++) {
             this.avgCookie4 = randomAvd4(min, max);
             console.log(this.avgCookie4);
+            this.arryCookie4.push(this.avgCookie4);
             this.totalAvg4 = this.totalAvg4 + this.avgCookie4;
         }
     },
@@ -203,7 +210,7 @@ var Paris = {
         for(var i =0; i<=this.Hours4.length ; i++) {
             var liE4 = document.createElement('li');
             ulE4.appendChild(liE4);
-            liE4.textContent = `${this.Hours4[i]}: ${this.avgCookie4[i]} cookies`
+            liE4.textContent = `${this.Hours4[i]}: ${this.arryCookie4[i]} cookies`
         }
         liE4.textContent = `Total: ${this.totalAvg4} cookies`
     }
