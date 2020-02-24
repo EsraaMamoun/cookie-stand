@@ -5,7 +5,7 @@ var Seattle = {
     maxPerCus: 65,
     avgCookieSale: 6.3,
     numCustPerHour: 0,
-    avgCookie: 0,
+    avgCookie: [0],
     totalAvg: 0,
     Hours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
     custPerHour: function (min, max) {
@@ -17,7 +17,7 @@ var Seattle = {
         for (var i = 0; i < Seattle.Hours.length; i++) {
             this.avgCookie = randomAvd(min, max);
             console.log(this.avgCookie);
-            // this.totalAvg = this.totalAvg + this.avgCookie;
+            this.totalAvg = this.totalAvg + this.avgCookie;
         }
     },
     inHTML: function () {
