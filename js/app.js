@@ -241,6 +241,7 @@ var Lima = {
     avgCookieSale5: 4.6,
     numCustPerHour5: 0,
     avgCookie5: [0],
+    arryCookie5: [],
     totalAvg5: 0,
     Hours5: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
     custPerHour5: function (min, max) {
@@ -251,6 +252,7 @@ var Lima = {
         for (var i = 0; i < Lima.Hours5.length; i++) {
             this.avgCookie5 = randomAvd5(min, max);
             console.log(this.avgCookie5);
+            this.arryCookie5.push(this.avgCookie5);
             this.totalAvg5 = this.totalAvg5 + this.avgCookie5;
         }
     },
@@ -267,7 +269,7 @@ var Lima = {
         for(var i =0; i<=this.Hours5.length ; i++) {
             var liE5 = document.createElement('li');
             ulE5.appendChild(liE5);
-            liE5.textContent = `${this.Hours5[i]}: ${this.avgCookie5[i]} cookies`
+            liE5.textContent = `${this.Hours5[i]}: ${this.arryCookie5[i]} cookies`
         }
         liE5.textContent = `Total: ${this.totalAvg5} cookies`
     }
