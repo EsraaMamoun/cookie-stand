@@ -87,6 +87,7 @@ for (var i = 0; i < shops.length; i++) {
 }
 
 
+
 var sumHour = 0;
 var arrySumHour = [];
 var totalTotal = 0;
@@ -99,13 +100,13 @@ function Footer(tableE) {
     th6.textContent = 'Totals';
 
     for (var i = 0; i < Hours.length; i++) {
-        sumHour = Seattle.arryCookie[i]+Tokyo.arryCookie[i]+Dubai.arryCookie[i]+Paris.arryCookie[i]+Lima.arryCookie[i];
+        sumHour = Seattle.arryCookie[i] + Tokyo.arryCookie[i] + Dubai.arryCookie[i] + Paris.arryCookie[i] + Lima.arryCookie[i];
         arrySumHour.push(sumHour);
     }
-    for (var i = 0; i < arrySumHour.length; i++){
+    for (var i = 0; i < arrySumHour.length; i++) {
         totalTotal = totalTotal + arrySumHour[i];
     }
-    for (var i = 0; i < arrySumHour.length; i++){
+    for (var i = 0; i < arrySumHour.length; i++) {
         var td8 = document.createElement('td');
         tableE.appendChild(td8);
         td8.textContent = arrySumHour[i];
@@ -115,3 +116,24 @@ function Footer(tableE) {
     th9.textContent = totalTotal;
 }
 Footer(tableE);
+
+
+
+var cookieForms = document.getElementById('salesForm');
+cookieForms.addEventListener('submit', function (event) {
+event.preventDefault();
+console.log(event);
+var name = event.target.name.value;
+console.log(name);
+var min = event.target.min.value;
+console.log(min);
+var max = event.target.max.value;
+console.log(max);
+var avg = event.target.avg.value;
+console.log(avg);
+var salesOpject = new List(name, min, max, avg);
+salesOpject.randomNumberCustPerHour();
+salesOpject.custPerHour();
+salesOpject.render();
+cookieForms.reset();
+});
