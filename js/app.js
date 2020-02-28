@@ -40,16 +40,16 @@ function Header(tableE) {
     tableE.appendChild(tr2);
 
     var th4 = document.createElement('th');
-    tableE.appendChild(th4);
+    tr2.appendChild(th4);
     th4.textContent = null;
 
     for (var i = 0; i < Hours.length; i++) {
         var th2 = document.createElement('th');
-        tableE.appendChild(th2);
+        tr2.appendChild(th2);
         th2.textContent = Hours[i];
     }
     var th5 = document.createElement('th');
-    tableE.appendChild(th5);
+    tr2.appendChild(th5);
     th5.textContent = '(Daily Location Total)';
 }
 Header(tableE);
@@ -91,12 +91,12 @@ for (var i = 0; i < shops.length; i++) {
 var sumHour = 0;
 var arrySumHour = [];
 var totalTotal = 0;
-function Footer(tableE) {
+function Footer() {
     var tr7 = document.createElement('tr');
     tableE.appendChild(tr7);
 
     var th6 = document.createElement('th');
-    tableE.appendChild(th6);
+    tr7.appendChild(th6);
     th6.textContent = 'Totals';
 
     for (var i = 0; i < Hours.length; i++) {
@@ -108,32 +108,35 @@ function Footer(tableE) {
     }
     for (var i = 0; i < arrySumHour.length; i++) {
         var td8 = document.createElement('td');
-        tableE.appendChild(td8);
+        tr7.appendChild(td8);
         td8.textContent = arrySumHour[i];
     }
     var th9 = document.createElement('td');
-    tableE.appendChild(th9);
+    tr7.appendChild(th9);
     th9.textContent = totalTotal;
 }
-Footer(tableE);
+Footer();
 
 
 
 var cookieForms = document.getElementById('salesForm');
 cookieForms.addEventListener('submit', function (event) {
-event.preventDefault();
-console.log(event);
-var name = event.target.name.value;
-console.log(name);
-var min = event.target.min.value;
-console.log(min);
-var max = event.target.max.value;
-console.log(max);
-var avg = event.target.avg.value;
-console.log(avg);
-var salesOpject = new List(name, min, max, avg);
-salesOpject.randomNumberCustPerHour();
-salesOpject.custPerHour();
-salesOpject.render();
-cookieForms.reset();
+    event.preventDefault();
+    var name = event.target.name.value;
+    var min = event.target.min.value;
+    min = parseInt(min);
+    var max = event.target.max.value;
+    max = parseInt(max);
+    var avg = event.target.avg.value;
+    avg = parseFloat(avg);
+    tableE.removeChild(tableE.lastChild);
+    if (max > min) {
+        var salesOpject = new List(name, min, max, avg);
+        salesOpject.custPerHour();
+        salesOpject.render();
+        Footer();
+        cookieForms.reset();
+    } else {
+        alert('Should be maximum number bigger than minimum number');
+    }
 });
