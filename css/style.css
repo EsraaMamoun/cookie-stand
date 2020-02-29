@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+body{
+    padding: 20px 40px 20px 40px;
+}
+header{
+    padding: 20px 200px 20px 200px;
+    background-color: powderblue;
+}
+main{
+    background-color: paleturquoise;
+    padding: 0px 20px 0px 20px;
+    margin-top: 20px;
+}
+#mainText{
+    font-size: larger;
+    font-family: Georgia, Times, serif;
+    color: rgb(109, 5, 78);
+    padding: 5px 20px 5px 10px;
+}
+span{
+    font-family: 'Courgette',sans-serif;
+    font-size: large;
+    color: rgb(10, 10, 73);
+}
+
+address{
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    padding-left: 20px;
+    color: rgb(2, 44, 44);
+}

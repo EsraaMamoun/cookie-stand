@@ -50,7 +50,7 @@ function Header(tableE) {
     }
     var th5 = document.createElement('th');
     tr2.appendChild(th5);
-    th5.textContent = '(Daily Location Total)';
+    th5.textContent = 'Daily Location Total';
 }
 Header(tableE);
 

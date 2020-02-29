@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+body{
+    background-color: rgb(182, 230, 230);
+}
+header{
+    padding: 200px 20px 150px 20px;
+    margin: 20px 200px 20px 200px;
+    background-image: url("/img/family.jpg");
+    background-position-x: center;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+}
+header ul{
+    position: relative;
+    top: 150px;
+    left: 17px;
+}
+form{
+    padding: 20px 365px 20px 365px;
+    font-family: 'Courgette',sans-serif;
+}
+fieldset{
+    color: teal;
+}
+input{
+    background-color: teal;
+    color: turquoise;
+    font-family: 'Courgette',sans-serif;
+}
+label{
+    color: teal;
+    font-family: 'Courgette',sans-serif;
+}
+table{
+    padding: 20px 20px 20px 20px;
+    margin: auto;
+    border: teal solid;
+    border-width: 100%;
+}
+th{
+    color: teal;
+    font-family: 'Open Sans Condensed', serif;
+    text-align: left;
+}
+td{
+    color: rgb(63, 62, 62);
+    font-family: 'Open Sans Condensed', serif;
+    text-align: center;
+}
