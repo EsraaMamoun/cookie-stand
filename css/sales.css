@@ -5,9 +5,9 @@ body{
     background-color: rgb(182, 230, 230);
 }
 header{
+    background-image: url("/img/family.jpg");
     padding: 200px 20px 150px 20px;
     margin: 20px 200px 20px 200px;
-    background-image: url("/img/family.jpg");
     background-position-x: center;
     background-position-y: 30%;
     background-repeat: no-repeat;
