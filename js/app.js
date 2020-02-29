@@ -20,7 +20,7 @@ List.prototype.randomNumberCustPerHour = function () {
 }
 
 List.prototype.custPerHour = function () {
-    this.randomNumberCustPerHour();
+    // this.randomNumberCustPerHour();
     for (var i = 0; i < Hours.length; i++) {
         this.avgCookie = Math.floor(this.randomNumberCustPerHour() * this.avgCookieSale);
         this.arryCookie.push(this.avgCookie);
@@ -38,11 +38,11 @@ secE.appendChild(tableE);
 function Header(tableE) {
     var tr2 = document.createElement('tr');
     tableE.appendChild(tr2);
-
+    
     var th4 = document.createElement('th');
     tr2.appendChild(th4);
     th4.textContent = null;
-
+    
     for (var i = 0; i < Hours.length; i++) {
         var th2 = document.createElement('th');
         tr2.appendChild(th2);
@@ -57,15 +57,15 @@ Header(tableE);
 
 List.prototype.render = function () {
     this.custPerHour();
-
+    
     var tr1 = document.createElement('tr');
     tableE.appendChild(tr1);
-
-
+    
+    
     var th3 = document.createElement('th');
     tr1.appendChild(th3);
     th3.textContent = this.townName;
-
+    
     for (var i = 0; i <= Hours.length; i++) {
         var td = document.createElement('td');
         tr1.appendChild(td);
@@ -102,11 +102,7 @@ function Footer() {
     for (var i = 0; i < Hours.length; i++) {
         sumHour = Seattle.arryCookie[i] + Tokyo.arryCookie[i] + Dubai.arryCookie[i] + Paris.arryCookie[i] + Lima.arryCookie[i];
         arrySumHour.push(sumHour);
-    }
-    for (var i = 0; i < arrySumHour.length; i++) {
         totalTotal = totalTotal + arrySumHour[i];
-    }
-    for (var i = 0; i < arrySumHour.length; i++) {
         var td8 = document.createElement('td');
         tr7.appendChild(td8);
         td8.textContent = arrySumHour[i];
@@ -132,11 +128,13 @@ cookieForms.addEventListener('submit', function (event) {
     tableE.removeChild(tableE.lastChild);
     if (max > min) {
         var salesOpject = new List(name, min, max, avg);
+        salesOpject.randomNumberCustPerHour();
         salesOpject.custPerHour();
         salesOpject.render();
         Footer();
-        cookieForms.reset();
-    } else {
+    } else{
+        Footer();
         alert('Should be maximum number bigger than minimum number');
     }
+    cookieForms.reset();
 });
