@@ -5,20 +5,15 @@ body{
     background-color: rgb(182, 230, 230);
 }
 header{
-    background-image: url("/img/family.jpg");
-    padding: 200px 20px 150px 20px;
-    margin: 20px 200px 20px 200px;
-    background-position-x: center;
-    background-position-y: 30%;
-    background-repeat: no-repeat;
+    margin: 20px 200px 0px 200px;
 }
 header ul{
     position: relative;
-    top: 150px;
-    left: 17px;
+    bottom: 50px;
+    right: 10px;
 }
 form{
-    padding: 20px 365px 20px 365px;
+    padding: 0px 365px 20px 365px;
     font-family: 'Courgette',sans-serif;
 }
 fieldset{
@@ -35,7 +30,7 @@ label{
 }
 table{
     padding: 20px 20px 20px 20px;
-    margin: auto;
+    margin: 0px 200px 40px 370px;
     border: teal solid;
     border-width: 100%;
 }
