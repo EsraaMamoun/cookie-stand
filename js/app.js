@@ -88,12 +88,12 @@ for (var i = 0; i < shops.length; i++) {
 function Footer() {
     var tr7 = document.createElement('tr');
     tableE.appendChild(tr7);
-    
+
     var th6 = document.createElement('th');
     tr7.appendChild(th6);
     th6.textContent = 'Totals';
     var totalTotal = 0;
-    
+
     for (var i = 0; i < Hours.length; i++) {
         var sumHour = 0;
         for (let j = 0; j < shops.length; j++) {
@@ -121,7 +121,9 @@ cookieForms.addEventListener('submit', function (event) {
     max = parseInt(max);
     var avg = parseFloat(event.target.avg.value);
     var salesOpject = new List(name, min, max, avg);
-    if (max > min) {
+    if (name == '') {
+        alert("Can you please enter the location name");
+    } else if (max > min) {
         tableE.removeChild(tableE.lastChild);
         shops.push(salesOpject);
         salesOpject.custPerHour();
