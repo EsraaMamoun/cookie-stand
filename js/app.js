@@ -102,7 +102,6 @@ function Footer() {
         var td8 = document.createElement('td');
         tr7.appendChild(td8);
         td8.textContent = sumHour;
-        // sumHour = Seattle.arryCookie[i] + Tokyo.arryCookie[i] + Dubai.arryCookie[i] + Paris.arryCookie[i] + Lima.arryCookie[i];
         totalTotal = totalTotal + sumHour;
     }
     var th9 = document.createElement('td');
